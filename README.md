@@ -43,9 +43,9 @@ RFID 리더 제어 코드 저장소 : https://github.com/miguelbalboa/rfid
 샘플 프로그램 중 **IOCheck** 는 측면의 사용자버튼의 동작을 감지하기 위하여 JellibiButton 라이브러리를 사용합니다. 
 아래 JellibiButton 라이브러리 저장소에서 코드를 다운로드 하고 아두이노 툴에 적용합니다. 
 
-JellibiButton  코드 저장소 : https://github.com/signaled/JellibiButton
+JellibiButton  코드 저장소 :https://github.com/RobotNMore/JellibiButton
 
-라이브러리 다운받기 링크 : https://github.com/signaled/JellibiButton/archive/master.zip 
+라이브러리 다운받기 링크 : https://github.com/RobotNMore/JellibiButton/archive/master.zip 
 
 
 ### 빌드 및 다운로드 
