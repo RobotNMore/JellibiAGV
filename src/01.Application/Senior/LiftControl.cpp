@@ -21,10 +21,14 @@ void LiftControl::Init()
     // default to Lift down state
     _servo1.write(SERVO1_PUTDOWN_ANGLE);
     _servo2.write(SERVO2_PUTDOWN_ANGLE);
+    _servo1.detach(); //추가 - 서보 소리 나는 문제 수정
+    _servo2.detach();
 }
 
 void LiftControl::LiftUP()
 {
+    _servo1.attach(_servo1Pin);
+    _servo2.attach(_servo2Pin);
     if (_liftState) { 
         return;
     }
@@ -52,4 +56,6 @@ void LiftControl::LiftDown()
     delay(20 + (MOVE_STEP - i)*2);
   }
   _liftState = false;
+  _servo1.detach(); //추가 - 서보 소리 나는 문제 수정
+  _servo2.detach();
 }
