@@ -94,6 +94,7 @@ static const String s_strRFIDUidForJeju;
 #define STEP_BACKWARD_DURATION      400
 #define SLEEP_DURATION             1000
 
+#define MAX_DRIVE_SPEED       210
 #define NORMAL_DRIVE_SPEED    60
 
 #define TURN_INITIAL_WHEEL_SPEED 90
