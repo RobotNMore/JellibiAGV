@@ -25,6 +25,14 @@ private:
     bool BuildCmdInitToWareHouse(String strUID);
     bool BuildWareHouseToTargetPosition(String strUID);
     bool BuildTargetPositionToWarePosition(String strUID);
+
+    String s_strRFIDUidForStart = String("09D0047F");
+    
+    String s_strRFIDUidForSeoul = String("0442743AAD5E81");
+    String s_strRFIDUidForIncheon = String("04E5B58A8A5F80"); // box 1
+    String s_strRFIDUidForSejong = String("044A743AAD5E81");
+    String s_strRFIDUidForDaejeon= String("04DDB18A8A5F80"); // box2
+    
 public:
     CommandBuilder();
     ~CommandBuilder();

@@ -74,21 +74,12 @@ enum CMD {
     eBeep           // Beep
 };
 
-
-static const String s_strRFIDUidForStart = String("09D0047F");
-
-static const String s_strRFIDUidForSeoul = String("0442743AAD5E81");
-static const String s_strRFIDUidForIncheon = String("04E5B58A8A5F80"); // box 1
-static const String s_strRFIDUidForSejong = String("044A743AAD5E81");
-static const String s_strRFIDUidForDaejeon= String("04DDB18A8A5F80"); // box2
-
 /*
 static const String s_strRFIDUidForDaegu;
 static const String s_strRFIDUidForGwangju;
 static const String s_strRFIDUidForChuncheon;
 static const String s_strRFIDUidForJeju;
 */
-
 
 #define STEP_FORWARD_DURATION       250
 #define STEP_BACKWARD_DURATION      400
