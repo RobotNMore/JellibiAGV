@@ -59,6 +59,8 @@ void setup() {
   delay(100);
   _servo1.write(SERVO1_DEF);
   _servo2.write(SERVO2_DEF);
+  _servo1.detach();
+  _servo2.detach();
   delay(2000);
 }
 
@@ -76,7 +78,9 @@ void loop() {
 
 void LiftUp()
 { 
-  const int STEP=20;
+  const int STEP = 20;
+  _servo1.attach(SERVO1_PIN);
+  _servo2.attach(SERVO2_PIN);
   Serial.println(__FUNCTION__);
   delay(1000);
   for ( int i =0; i <= STEP; i++) {
@@ -102,4 +106,6 @@ void PutDown()
     Serial.println(String("servo1: ") + angle1 + String("    servo2: ") + angle2);
     delay(20);
   }
+  _servo1.detach();
+  _servo2.detach();
 }               

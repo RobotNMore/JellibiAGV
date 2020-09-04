@@ -161,13 +161,17 @@ void InitServo()
   delay(100);
   _servo1.write(SERVO1_DEF);
   _servo2.write(SERVO2_DEF);
+  _servo1.detach();
+  _servo2.detach();
 }
 
 void LiftUp()
 {
-  const int STEP=20;
+  const int STEP = 20;
+  _servo1.attach(SERVO1_PIN);
+  _servo2.attach(SERVO2_PIN);
   Serial.println(__FUNCTION__);
- 
+
   for ( int i =0; i <= STEP; i++) {
     int angle1 = map(i, 0, STEP, SERVO1_MIN, SERVO1_MAX);
     int angle2 = map(i, 0, STEP, SERVO2_MIN, SERVO2_MAX);
@@ -181,6 +185,7 @@ void PutDown()
 {
   const int STEP = 20;
   Serial.println(__FUNCTION__);
+
   for (int i=0; i<= STEP;i++) {
     int angle1 = map(i,0, STEP, SERVO1_MAX, SERVO1_MIN);
     int angle2 = map(i,0, STEP, SERVO2_MAX, SERVO2_MIN);
@@ -188,6 +193,8 @@ void PutDown()
     _servo2.write(angle2);
     delay(20);
   }
+  _servo1.detach();
+  _servo2.detach();
 }
 
 
