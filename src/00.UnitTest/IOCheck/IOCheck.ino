@@ -79,15 +79,15 @@ void PlayTone();
 // {{{ Servo (D9, D10) 
 #include <Servo.h>
 
-#define SERVO1_PIN 9 //Servo1
-#define SERVO1_MIN 90
-#define SERVO1_MAX 00
-#define SERVO1_DEF SERVO1_MIN
+#define SERVO1_PIN   9
+#define SERVO1_MIN  180 // MinDown
+#define SERVO1_MAX  90+10  // MaxUp+10
+#define SERVO1_DEF  SERVO1_MIN
 
-#define SERVO2_PIN 10 // Servo2
-#define SERVO2_MIN 00
-#define SERVO2_MAX 90
-#define SERVO2_DEF SERVO2_MIN 
+#define SERVO2_PIN  10
+#define SERVO2_MIN  0   // MinDown
+#define SERVO2_MAX  90-10 // MaxUp-10
+#define SERVO2_DEF  SERVO2_MIN
 
 Servo _servo1;
 Servo _servo2;
