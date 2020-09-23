@@ -54,13 +54,7 @@ void setup() {
   // put your setup code here, to run once:
   _button.Init(USER_BUTTON, false);
   Serial.begin(9600);
-  _servo1.attach(SERVO1_PIN);
-  _servo2.attach(SERVO2_PIN);
-  delay(100);
-  _servo1.write(SERVO1_DEF);
-  _servo2.write(SERVO2_DEF);
-  _servo1.detach();
-  _servo2.detach();
+  InitServo();
   delay(2000);
 }
 
@@ -73,6 +67,17 @@ void loop() {
   LiftUp();
   PutDown();
 
+}
+void InitServo()
+{
+  _servo1.attach(SERVO1_PIN);
+  _servo2.attach(SERVO2_PIN);
+  delay(300);
+  _servo1.write( SERVO1_MIN );
+  _servo2.write( SERVO2_MIN );
+  delay(300);
+  _servo1.detach();
+  _servo2.detach();
 }
 
 
